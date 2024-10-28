@@ -1,0 +1,441 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: white; /* Set the entire background color to white */
+}
+
+header {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the horizontal menu */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the tabs in the horizontal menu */
+    width: 100%;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+#navbar ul li a:hover {
+    background-color: #575757;
+}
+
+section {
+    padding: 50px 20px;
+    margin-top: 100px; /* Increased margin to prevent overlap */
+}
+
+#home {
+    background-color: white; /* Set home background color to white */
+    min-height: calc(100vh - 100px); /* Adjust height considering the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center; /* Align the items horizontally and vertically centered */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap; /* Make the container adaptive for smaller screens */
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 240px; /* Reduced size */
+    height: 240px; /* Reduced size */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-photo-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.about-me {
+    max-width: 600px;
+    text-align: justify;
+    flex: 1; /* Ensure the paragraph takes up the remaining space */
+}
+
+/* Floating menu button */
+#menu-btn {
+    display: none; /* Hidden by default, shown on mobile */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #menu-btn {
+        display: block; /* Show the button on mobile */
+    }
+    
+    header {
+        display: none; /* Hide the header by default on mobile */
+    }
+    
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #home {
+        padding-top: 20px;
+        height: auto; /* Adjust height for mobile */
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-photo-container h1 {
+        font-size: 2em;
+    }
+    
+    .about-me {
+        max-width: 90%;
+        padding: 0 20px;
+        margin-left: 0; /* Ensure paragraph is centered on mobile */
+    }
+    
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-links img {
+        width: 25px; /* Smaller Google Scholar icon */
+        height: 25px; /* Smaller Google Scholar icon */
+    }
+}
+
+/* Other CSS code already defined above */
+
+#research {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.research-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.research-interests {
+    text-align: left;
+    width: 100%;
+}
+
+.research-interests h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.research-interests ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.research-topic {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Align items to the center */
+}
+
+.research-topic h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.research-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.research-topic p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Mobile Adaptation */
+@media screen and (max-width: 768px) {
+    .research-interests, .research-topic {
+        text-align: center;
+    }
+
+    .research-interests ul {
+        margin-left: 0;
+    }
+}
+
+
+/* Other CSS code already defined above */
+
+/* Projects Section Styling */
+/* Projects Section Styling */
+#projects {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-image {
+    width: 96px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.project-item p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Mobile Adaptation */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        padding: 0 20px;
+    }
+
+    .project-item {
+        border-bottom: none;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project-title {
+        flex-direction: column; /* Stack image and title vertically */
+        align-items: center; /* Center-align content in mobile */
+    }
+
+    .project-image {
+        margin-bottom: 10px; /* Add space below image */
+    }
+}
+
+
+
+
+/* Other CSS code already defined above */
+
+#cv {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #575757;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 0 20px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-item img {
+        margin-bottom: 5px;
+    }
+}
+
+.cv-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cv-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #575757;
+}
+
+@media screen and (max-width: 768px) {
+    .cv-container {
+        padding: 0 20px;
+    }
+
+    .cv-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 0;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
